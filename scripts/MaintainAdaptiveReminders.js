@@ -282,6 +282,11 @@ async function maintainRecurringReminders() {
     // Create the next reminder in the parent list, preserving user notes
     let reminder = new Reminder();
     reminder.title = `${baseTitle}~${newInterval}`;
+    // Flag BEFORE the date as well as after: the original script set
+    // dueDateIncludesTime first and produced clean all-day entries; setting
+    // it only after the date can leave a midnight date flagged as timed,
+    // which Reminders renders as "due 12:00 AM" instead of all-day.
+    reminder.dueDateIncludesTime = false;
     reminder.dueDate = dueDate;
     reminder.dueDateIncludesTime = false;
     reminder.isAllDay = true;

@@ -218,6 +218,7 @@ async function analyzeRecurrence() {
     if (!targetCalendars[parentList]) continue;
 
     const r = new Reminder();
+    r.dueDateIncludesTime = false; // before any dueDate assignment (see Maintain)
     r.title = newTitle;
     r.calendar = targetCalendars[parentList];
     r.notes = `Parent: ${parentList}**#recurring`;
