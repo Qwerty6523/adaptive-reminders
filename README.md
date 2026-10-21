@@ -34,8 +34,6 @@ You need an iPhone with Shortcuts and the free **Scriptable** app.
    - [Update Due Date Counter](https://www.icloud.com/shortcuts/0f81adc14d21474f9aff24a159fae041)
    - [RecurranceUpdater](https://www.icloud.com/shortcuts/340f158186984c8794eb24fb4fd54062)
    - [Update Completed Parent](https://www.icloud.com/shortcuts/7539e04d509c4af78f4cef1e1558f76b)
-   
-   After adding RecurranceUpdater, open it and check the **last action**: the script name must read `MaintainAdaptiveReminders` with **no trailing space**.
 4. **Create the automations** (personal automations can't be shared, so these three minutes are manual): Shortcuts → Automation → App → Reminders →
    - *Is Opened* → Run Immediately → run Update Due Date Counter, then Update To Do List.
    - *Is Closed* → Run Immediately → run RecurranceUpdater.
